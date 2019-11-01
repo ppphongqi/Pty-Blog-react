@@ -1,33 +1,31 @@
 import React from 'react';
 import {Row , Col} from 'antd';
-
+import 'antd/dist/antd.css';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import NavLeft from './component/NavLeft';
 import NavRight from './component/NavRight';
 
 
+import './common.css';
+
+
 export default class Admin extends React.Component{
 
     render(){
         return (
-            <div className = "app">
-
+            <div className="app">
                 <Header />
-                <div className = "app-content-layout">
+                <div className="app-content-layout">
                     {/* antd-flex布局 居中对齐 */}
                     <Row type="flex" justify="center">
-                        {/* 左侧导航 */}
-                        <Col span={2}>
+     
+                        <Col span={4}>
                             <NavLeft />
                         </Col>
-
-                        {/* 中间内容 */}
-                        <Col sapn={10}>
+                        <Col span={10}>
                             {this.props.children}
                         </Col>
-
-                        {/* 右侧导航 */}
                         <Col span={5}>
                             <NavRight />
                         </Col>

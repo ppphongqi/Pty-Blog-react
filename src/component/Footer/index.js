@@ -13,7 +13,7 @@ export default class Footer extends React.Component{
     render(){
         return (
             <div style={styles}>
-                这是头部
+                这是页尾
             </div>
         )
     }
