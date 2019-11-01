@@ -1,16 +1,17 @@
 
 
 import React from 'react';
-import { Input , Menu , Avatar , Divider , Icon , Button} from 'antd';
+// import { Input , Menu , Avatar , Divider , Icon , Button} from 'antd';
+import {Input ,Button , Icon ,Menu  ,Divider} from 'antd';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import './index.css';
+// import PropTypes from 'prop-types';
+import './index.scss';
 
 
-const { SubMenu } = Menu.SubMenu ; 
+// const { SubMenu } = Menu.SubMenu ; 
 
 const styles = {
-        background : 'blue'
+        "font-size" : "20px"
 }
 
 class Header extends React.Component{
@@ -23,38 +24,63 @@ class Header extends React.Component{
 
     render(){
         return (
-            <div>
-                <div>
-                    <div className="logo">
-                         
+            <div className="container">
+                <div className="topbar-container">
+                    <div className="logo-container">
+                        <NavLink to="/home">
+                            <div className="logo"></div>
+                        </NavLink>
                     </div>
 
-                    <div className="input">
+                    <Input 
+                        style={{width:"22%"}}
+                        placeholder="搜索文章、日志"
+                        allowClear
+                        size="large">
+                    </Input>
 
-                    </div>
+                    <NavLink to="/search">
+                        <Button
+                            type="primary"
+                            size="large">
+                                <Icon type="search" style={{color:"black"}}/>
+                        </Button>
+                    </NavLink>
 
-                    <div className="Button">
+                    <div className="topbar-menu" >
+                        <Menu mode="horizontal">
+                            
+                            <Menu.Item key="alipay"  style={styles}>
+                                <Icon type="home" theme="filled" style={styles}/>
+                                Home
+                            </Menu.Item>
+                            <Menu.Item key="mail" style={styles}>
+                                <Icon type="cloud" theme="filled" style={styles}/>
+                                Blog
+                            </Menu.Item>
+                            <Menu.Item key="Archive" style={styles}>
+                                <Icon type="book" theme="filled" style={styles}/>
+                                Archive
+                            </Menu.Item>
+                            <Menu.Item key="game" style={styles}>
+                                <Icon type="like" theme="filled" style={styles} />
+                                Game
+                            </Menu.Item>
 
-                    </div>
-
-                    <div className="Menu">
+                        </Menu>
 
                     </div>
 
                     <div className="avatar">
+                        <div className="ava">
+                        </div>
 
+                        <Divider type="vertical" />
+                        
+                        <Icon type="github" theme="filled"  className="my-github"/>
+                            
                     </div>
-
-                    <div className="Divider">
-
-                    </div>
-
-                    <div className="Icon">
-
-                    </div>
-
                 </div>
-
             </div>
         )
     }
