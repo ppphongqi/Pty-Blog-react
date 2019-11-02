@@ -7,7 +7,7 @@ import NavLeft from './component/NavLeft';
 import NavRight from './component/NavRight';
 
 
-import './common.css';
+import './common.scss';
 
 
 export default class Admin extends React.Component{
@@ -18,6 +18,9 @@ export default class Admin extends React.Component{
                 <Header />
                 <div className="app-content-layout">
                     {/* antd-flex布局 居中对齐 */}
+                    
+                    <div className="swiper"></div>
+
                     <Row type="flex" justify="center">
      
                         <Col span={4}>
