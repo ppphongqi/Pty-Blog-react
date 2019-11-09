@@ -3,7 +3,8 @@
 import React from 'react';
 
 const styles = {
-        background : 'red'
+        background : 'red',
+
 }
 
 export default class Footer extends React.Component{

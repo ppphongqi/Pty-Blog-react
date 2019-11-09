@@ -21,12 +21,12 @@ export default class Admin extends React.Component{
                     
                     <div className="swiper"></div>
 
-                    <Row type="flex" justify="center">
+                    <Row type="flex" justify="center" className="admin">
      
                         <Col span={4}>
                             <NavLeft />
                         </Col>
-                        <Col span={10}>
+                        <Col span={12}>
                             {this.props.children}
                         </Col>
                         <Col span={5}>
