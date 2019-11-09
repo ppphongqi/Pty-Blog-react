@@ -23,10 +23,10 @@ export default class Admin extends React.Component{
 
                     <Row type="flex" justify="center" className="admin">
      
-                        <Col span={4}>
+                        <Col span={4} >
                             <NavLeft />
                         </Col>
-                        <Col span={12}>
+                        <Col span={12} className="admin_middle">
                             {this.props.children}
                         </Col>
                         <Col span={5}>
